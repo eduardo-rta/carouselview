@@ -1,7 +1,7 @@
 package com.synnapps.example.carouselview;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -69,7 +69,7 @@ public class SampleCarouselViewActivity extends AppCompatActivity {
         @Override
         public void setImageForPosition(int position, ImageView imageView) {
 
-            Picasso.with(getApplicationContext()).load(sampleNetworkImageURLs[position]).placeholder(sampleImages[0]).error(sampleImages[3]).fit().centerCrop().into(imageView);
+            Picasso.get().load(sampleNetworkImageURLs[position]).placeholder(sampleImages[0]).error(sampleImages[3]).fit().centerCrop().into(imageView);
 
             //imageView.setImageResource(sampleImages[position]);
         }
